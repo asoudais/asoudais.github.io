@@ -80,12 +80,12 @@
 
 * {
     margin: 0;
-    font-size: 16pt;
+    /* font-size: 16pt; */
   }
   
 body {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1em;
+    /* font-size: 1em; */
     background-color: var(--base-color);
     color: var(--text-color);
     position: relative;
@@ -93,9 +93,7 @@ body {
 
 main{
     text-align: left;
-    margin-left:50px;
-    padding-right: 50px;
-    width:74%;
+    width:75vw;
     word-wrap: break-word;
 }
 
@@ -105,14 +103,19 @@ main{
     border-left: 2px solid var(--secondary-text);
 }
 
-section:before {
+section{
+    margin-left:50px;
+    padding-right: 50px;
+}
+
+/* section:before {
     content: " ";
     display: block;
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
     border-radius: 2px;
     margin-left: 0;
-  }
+  } */
 
 .seperator {
     content: " ";
@@ -120,7 +123,7 @@ section:before {
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
     border-radius: 2px;
-    margin-left: 0;
+    margin: 3vh 0 2vh 0;
   }
 
 nav {
@@ -131,19 +134,31 @@ nav {
     height: 100%;
     width: 25vw;
     color: var(--nav-text-color);
-    font-size: 16pt;
     border-left: 1px solid var(--nav-text-color);
+
+    @media (max-width: 768px) {
+        display: none;
+        font-size: 5px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+    
+    @media (min-width: 1280px) {
+        font-size: 24px;
+    }
 }
 
 
 nav .test { 
     display: grid; 
     align-items:flex-start; /* Vertically centers items */ 
-    height: 50%; /* Set navbar height */
+    height: 40vh; /* Set navbar height */
     position: fixed;
     right: 0px;
     margin: auto;
-    width: 24.9%;
+    width: 24.9vw;
     grid-auto-flow: row; /* Align items in a row */ 
     background-color: var(--nav-color); /* Background color */ 
     color: var(--nav-text-color);
@@ -153,19 +168,20 @@ nav .test {
 nav h1{
     list-style: none;
     text-align: center;
+    align-items: center;
     padding-top: 20px;
-    height: 10%;
+    height: 10vh;
 }
 
 nav p{
     list-style: none;
     text-align: center;
-    height: 10%;
+    height: 10vh;
 }
 
 .nav_items a{ 
     display: block;
-    padding: 8px 16px;
+    padding: 16px 16px;
     text-align: center;
     text-decoration: none;
     color: var(--nav-text-color);
@@ -174,7 +190,7 @@ nav p{
 .nav_items a:hover{ 
     display: block;
     width: 100%;
-    height:100%;
+    height: 100%;
     background-color: var(--nav-select);
 } 
 
@@ -182,12 +198,13 @@ nav p{
     list-style-type: none;
 }
 
-.logo{
+nav .logo{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
-    height: 150px;
+    width: 15vh;
+    height: 15vh;
+    margin-bottom: 5vh;
 }
 
 .link-IPAG{
