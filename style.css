@@ -1,0 +1,273 @@
+:root{
+    --base-color:white;
+    --base-variant:white;
+    --text-color:black;
+    --secondary-text:rgb(182, 182, 182);
+    --primary-color:black;
+    --accent-color:red;
+    --nav-text-color:white;
+    --nav-color:#0d1117;
+    --nav-select:#0069ff33;
+    --skill-box:pink;
+}
+
+.darkmode{
+    --base-color:#010409;
+    --base-variant:#0d1117;
+    --text-color:white;
+    --secondary-text:grey;
+    --primary-color:white;
+    --accent-color:red;
+    --nav-text-color:white;
+    --nav-color:#0d1117;
+    --nav-select:#0069ff33;
+    --skill-box:purple;
+}
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+}
+
+#theme-switch svg{
+    fill: var(--primary-color)
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+#mail{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    display: flex;
+    bottom: 20px;
+    right: 16%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+}
+
+#mail svg{
+    fill: white;
+}
+
+.img-pulsar{
+    margin:0px;
+    width: 288px;
+    height:162px;
+
+}
+
+* {
+    margin: 0;
+    font-size: 16pt;
+  }
+  
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+main{
+    text-align: left;
+    margin-left:50px;
+    padding-right: 50px;
+    width:74%;
+    word-wrap: break-word;
+}
+
+.text{
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid var(--secondary-text);
+}
+
+section:before {
+    content: " ";
+    display: block;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 2px;
+    margin-left: 0;
+  }
+
+.seperator {
+    content: " ";
+    display: block;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 2px;
+    margin-left: 0;
+  }
+
+nav {
+    background-color: var(--nav-color);
+    position: fixed;
+    right: 0px;
+    margin: auto;
+    height: 100%;
+    width: 25vw;
+    color: var(--nav-text-color);
+    font-size: 16pt;
+    border-left: 1px solid var(--nav-text-color);
+}
+
+
+nav .test { 
+    display: grid; 
+    align-items:flex-start; /* Vertically centers items */ 
+    height: 50%; /* Set navbar height */
+    position: fixed;
+    right: 0px;
+    margin: auto;
+    width: 24.9%;
+    grid-auto-flow: row; /* Align items in a row */ 
+    background-color: var(--nav-color); /* Background color */ 
+    color: var(--nav-text-color);
+    /* padding-top: 50px; */
+} 
+
+nav h1{
+    list-style: none;
+    text-align: center;
+    padding-top: 20px;
+    height: 10%;
+}
+
+nav p{
+    list-style: none;
+    text-align: center;
+    height: 10%;
+}
+
+.nav_items a{ 
+    display: block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--nav-text-color);
+}
+
+.nav_items a:hover{ 
+    display: block;
+    width: 100%;
+    height:100%;
+    background-color: var(--nav-select);
+} 
+
+.nav_list{
+    list-style-type: none;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.link-IPAG{
+    text-decoration: none;
+    color: green;
+}
+.link-IPAG:hover{
+    text-decoration: underline;
+}
+
+a.external-links{
+    padding: 10px 10px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: white;
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.list-skills {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 8px;
+
+    @media (min-width: 768px) {
+      gap: 12px;
+    }
+  
+    @media (min-width: 1280px) {
+      gap: 16px;
+    }
+}
+
+.tag {
+    padding: 6px 12px;
+    border-radius: 16px;
+    /* font-size: 14px; */
+    font-weight: 600;
+    background-color: var(--skill-box);
+    color: var(--text-color);
+  
+    @media (min-width: 768px) {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  
+    @media (min-width: 1280px) {
+      font-size: 15px;
+      padding: 6px 14px;
+    }
+  }
+
+footer{
+    margin-top: 20px;
+    width: 75%;
+    text-align: center;
+}
+
+footer img{
+    width: 100%;
+}
+
+
+/* nav a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+} */
+
+
+/*ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    right: 0px;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+/*    position: fixed; /* Make it stick, even on scroll */
+/*    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+/*  }
