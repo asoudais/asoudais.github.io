@@ -155,33 +155,43 @@ nav .test {
     display: grid; 
     align-items:flex-start; /* Vertically centers items */ 
     height: 40vh; /* Set navbar height */
-    position: fixed;
+    /* position: fixed; */
     right: 0px;
     margin: auto;
     width: 24.9vw;
     grid-auto-flow: row; /* Align items in a row */ 
     background-color: var(--nav-color); /* Background color */ 
     color: var(--nav-text-color);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     /* padding-top: 50px; */
 } 
 
 nav h1{
-    list-style: none;
-    text-align: center;
+    height: 10vh; 
+    width:100%;
+    display:flex;
     align-items: center;
-    padding-top: 20px;
-    height: 10vh;
+    justify-content: center;
+}
+
+.info-container p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
 }
 
 nav p{
-    list-style: none;
     text-align: center;
-    height: 10vh;
+    height: 15vh;
+    /* display: table-cell;
+    text-align: center; */
 }
 
 .nav_items a{ 
     display: block;
-    padding: 16px 16px;
+    /* padding: 16px 16px; */
     text-align: center;
     text-decoration: none;
     color: var(--nav-text-color);
@@ -198,13 +208,23 @@ nav p{
     list-style-type: none;
 }
 
-nav .logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15vh;
-    height: 15vh;
-    margin-bottom: 5vh;
+nav .logo-container{
+    margin: auto;
+    height: 10vh;
+    width: 10vh;
+    text-align: center;
+}
+
+.logo-container img{
+    vertical-align: middle;
+    width: 10vh;
+    height: 10vh;
+}
+
+.logo-container-2 img{
+    vertical-align: middle;
+    width: 10vh;
+    height: 10vh;
 }
 
 .link-IPAG{
