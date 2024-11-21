@@ -37,7 +37,7 @@
     align-items: center;
     position: fixed;
     bottom: 20px;
-    right: 5%;
+    right: 3%;
 }
 
 #theme-switch svg{
@@ -62,7 +62,7 @@
     padding: 0;
     display: flex;
     bottom: 20px;
-    right: 16%;
+    right: 19%;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -79,7 +79,7 @@
     padding: 0;
     display: flex;
     bottom: 20px;
-    right: 12vw;
+    right: 11.25%;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -90,12 +90,40 @@
     fill: white;
 }
 
+#thumbs {   
+    width: 24.9vw;
+    /* margin-top:90px; */
+    margin-left: auto; 
+    margin-right: auto;
+
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    display: table-cell;
+    border: 1px solid red;
+}
+#thumbs a {
+    vertical-align: top;
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+}
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+
 .img-pulsar{
     margin:0px;
     width: 288px;
     height:162px;
 
 }
+
+
 
 * {
     margin: 0;
@@ -255,15 +283,10 @@ nav .logo-container{
     transform: rotateY(180deg);
 }
 
-.logo-container-2 img{
-    vertical-align: middle;
-    width: 10vh;
-    height: 10vh;
-}
-
 .link-IPAG{
     text-decoration: none;
     color: green;
+    font-weight: 600;
 }
 .link-IPAG:hover{
     text-decoration: underline;
