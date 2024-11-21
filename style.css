@@ -240,24 +240,42 @@ nav p{
     text-align: center; */
 }
 
-.nav_items a{ 
-    display: block;
-    /* padding: 16px 16px; */
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    > div {
+        flex: 0 0 25vw;
+    }
+}
+
+.nav-items {
+width: 100%;
+/* height: 120px; */
+/* background: #ececec;
+border: 1px solid #ddd; */
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.nav-items a{
     text-align: center;
     text-decoration: none;
     color: var(--nav-text-color);
-}
+    width: 100%;
+    }
 
-.nav_items a:hover{ 
-    display: block;
+.nav-items a:hover{ 
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     background-color: var(--nav-select);
 } 
-
-.nav_list{
-    list-style-type: none;
-}
 
 nav .logo-container{
     margin: auto;
@@ -265,12 +283,6 @@ nav .logo-container{
     width: 10vh;
     text-align: center;
 }
-
-/* nav .logo-container img:hover{
-    -webkit-transform: rotateY('180');
-    -webkit-transition: 1.5s;
-} */
-
 
 .logo-container img{
     vertical-align: middle;
@@ -346,29 +358,6 @@ footer img{
 }
 
 
-/* nav a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-} */
-
-
-/*ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    right: 0px;
-    background-color: #f1f1f1;
-    height: 100%; /* Full height */
-/*    position: fixed; /* Make it stick, even on scroll */
-/*    overflow: auto; /* Enable scrolling if the sidenav has too much content */
-/*  }
-
-
-/* CSS */
-
 .button-wrapper{
     align-items: center;
     text-align: center;
@@ -399,14 +388,14 @@ a.button {
     touch-action: manipulation;
   }
   
-  a.button:hover,
-  a.button:focus-visible{
+a.button:hover,
+a.button:focus-visible{
     --_p: 0px;
     outline-color: var(--color);
     outline-offset: .05em;
-  }
-  
-  a.button:active {
+}
+
+a.button:active {
     background: var(--color);
     color: #fff;
-  }
+}
