@@ -9,11 +9,12 @@
     --nav-color:#0d1117;
     --nav-select:#0069ff33;
     --skill-box:pink;
+    --separator:grey;
 }
 
 .darkmode{
     --base-color:#010409;
-    --base-variant:#0d1117;
+    --base-variant:#151b23;
     --text-color:white;
     --secondary-text:grey;
     --primary-color:white;
@@ -22,6 +23,7 @@
     --nav-color:#0d1117;
     --nav-select:#0069ff33;
     --skill-box:purple;
+    --separator:grey;
 }
 
 #theme-switch{
@@ -71,6 +73,23 @@
     fill: white;
 }
 
+#github{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    display: flex;
+    bottom: 20px;
+    right: 12vw;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+}
+
+#github svg{
+    fill: white;
+}
+
 .img-pulsar{
     margin:0px;
     width: 288px;
@@ -108,6 +127,10 @@ section{
     padding-right: 50px;
 }
 
+section p{
+    background: var(--base-variant);
+}
+
 /* section:before {
     content: " ";
     display: block;
@@ -120,9 +143,9 @@ section{
 .seperator {
     content: " ";
     display: block;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    border-radius: 2px;
+    border-top: 2px solid var(--separator);
+    border-bottom: 2px solid var(--separator);
+    /* border-radius: 2px; */
     margin: 3vh 0 2vh 0;
   }
 
@@ -215,10 +238,21 @@ nav .logo-container{
     text-align: center;
 }
 
+/* nav .logo-container img:hover{
+    -webkit-transform: rotateY('180');
+    -webkit-transition: 1.5s;
+} */
+
+
 .logo-container img{
     vertical-align: middle;
     width: 10vh;
     height: 10vh;
+    transition: transform 0.75s ease-in-out
+}
+
+.logo-container img:hover{
+    transform: rotateY(180deg);
 }
 
 .logo-container-2 img{
@@ -280,12 +314,12 @@ a.external-links{
 
 footer{
     margin-top: 20px;
-    width: 75%;
+    width: 75vw;
     text-align: center;
 }
 
 footer img{
-    width: 100%;
+    width: 75vw;
 }
 
 
@@ -308,3 +342,48 @@ footer img{
 /*    position: fixed; /* Make it stick, even on scroll */
 /*    overflow: auto; /* Enable scrolling if the sidenav has too much content */
 /*  }
+
+
+/* CSS */
+
+.button-wrapper{
+    align-items: center;
+    text-align: center;
+}
+
+a.button {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #373B44;
+    
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+  
+    border: 0;
+    margin: 10px;
+    text-decoration: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  a.button:hover,
+  a.button:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  a.button:active {
+    background: var(--color);
+    color: #fff;
+  }
