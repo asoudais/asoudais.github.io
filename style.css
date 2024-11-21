@@ -399,3 +399,13 @@ a.button:active {
     background: var(--color);
     color: #fff;
 }
+
+.nav-bottom {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 2vh;
+    height: 5vh;
+    width: 25vw;
+    align-items: center;
+}
