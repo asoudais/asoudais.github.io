@@ -26,18 +26,39 @@
     --separator:grey;
 }
 
-/* #theme-switch{
+.nav-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    position: absolute;
+    bottom: 2vh;
+    height: 5vh;
+    width: 25vw;
+}
+
+#mail, #github{
     height: 50px;
     width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mail svg, #github svg{
+    fill: white;
+}
+
+#theme-switch{
     padding: 0;
     border-radius: 50%;
+    height: 50px;
+    width: 50px;
     background-color: var(--base-variant);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 20px;
-    right: 3%;
 }
 
 #theme-switch svg{
@@ -55,40 +76,6 @@
 .darkmode #theme-switch svg:last-child{
     display: block;
 }
-
-#mail{
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    display: flex;
-    bottom: 20px;
-    right: 19%;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-
-}
-
-#mail svg{
-    fill: white;
-}
-
-#github{
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    display: flex;
-    bottom: 20px;
-    right: 11.25%;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-
-}
-
-#github svg{
-    fill: white;
-} */
 
 
 .img-pulsar{
@@ -120,6 +107,8 @@ main{
     margin-left: 20px;
     padding-left: 10px;
     border-left: 2px solid var(--secondary-text);
+    /* box-shadow:0px 0px 10px rgba(0,0,0,.5); */
+    box-shadow:0px 0px 5px var(--primary-color);
 }
 
 section{
@@ -127,7 +116,12 @@ section{
     padding-right: 50px;
 }
 
+#about{
+    padding-top: 5vh;
+}
+
 section p{
+    padding: 1vh 0 1vh 0;
     background: var(--base-variant);
 }
 
@@ -338,7 +332,7 @@ footer img{
 a.button {
     --b: 3px;   /* border thickness */
     --s: .45em; /* size of the corner */
-    --color: #373B44;
+    --color: var(--primary-color);
     
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
     color: var(--color);
@@ -364,73 +358,83 @@ a.button:hover,
 a.button:focus-visible{
     --_p: 0px;
     outline-color: var(--color);
-    outline-offset: .05em;
+    outline-offset: .25em;
 }
 
 a.button:active {
-    background: var(--color);
-    color: #fff;
+    background: var(--base-color);
+    color: var(--primary-color);
 }
 
-/* .nav-bottom {
-    display: inline-flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 2vh;
-    height: 5vh;
-    width: 25vw;
-    align-items: center;
-} */
 
 
-.nav-bottom {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-content: center;
-    position: absolute;
-    bottom: 2vh;
-    height: 5vh;
-    width: 25vw;
-}
-
-#mail, #github{
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#mail svg, #github svg{
-    fill: white;
-}
-
-#theme-switch{
-    padding: 0;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
+.timeline{
+    width:69vw;
+    /* background-color:#072736; */
+    color:var(--primary-color);
+    padding:30px 120px;
+    box-shadow:0px 0px 11px var(--primary-color);
     background-color: var(--base-variant);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  }
+  .timeline ul{
+    list-style-type:none;
+    border-left:2px solid var(--skill-box);
+    padding:10px 5px;
+  }
+  .timeline ul li{
+    padding:20px 20px;
+    position:relative;
+    /* transition:.5s; */
+  }
+  .timeline ul li span{
+    display:inline-block;
+    background-color:var(--skill-box);
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 600;
+    text-align:center;
+    position: relative;
+    left: -125px;
+  }
 
-#theme-switch svg{
-    fill: var(--primary-color)
-}
+  .timeline ul li .content{
 
-#theme-switch svg:last-child{
-    display: none;
-}
+  }
+  .timeline ul li .content h3{
+    color:#34ace0;
+    font-weight: 600;
+    padding-top:5px;
+  }
+  .timeline ul li .content p{
+    padding:5px 0px 15px 0px;
+    /* font-size:15px; */
+  }
+  .timeline ul li:before{
+    position:absolute;
+    content:'';
+    width:10px;
+    height:10px;
+    background-color:var(--skill-box);
+    border-radius:50%;
+    left:-11px;
+    top:28px;
+  }
 
-.darkmode #theme-switch svg:first-child{
-    display: none;
-}
-
-.darkmode #theme-switch svg:last-child{
-    display: block;
-}
-
+  /* .timeline ul li:hover{
+    background-color:#071f2a;
+  }
+  .timeline ul li:hover:before{
+    background-color:#0F0;
+    box-shadow:0px 0px 10px 2px #0F0;
+  }
+  @media (max-width:300px){
+    .timeline{
+      width:100%;
+      padding:30px 5px 30px 10px;
+    }
+    .timeline ul li .content h3{
+      color:#34ace0;
+      font-size:15px;
+    }
+  
+  } */
