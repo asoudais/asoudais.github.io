@@ -26,7 +26,7 @@
     --separator:grey;
 }
 
-#theme-switch{
+/* #theme-switch{
     height: 50px;
     width: 50px;
     padding: 0;
@@ -88,42 +88,14 @@
 
 #github svg{
     fill: white;
-}
-
-#thumbs {   
-    width: 24.9vw;
-    /* margin-top:90px; */
-    margin-left: auto; 
-    margin-right: auto;
-
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-    display: table-cell;
-    border: 1px solid red;
-}
-#thumbs a {
-    vertical-align: top;
-    display: inline-block;
-    display: inline;
-    zoom: 1;
-}
-.stretch {
-    width: 100%;
-    display: inline-block;
-    font-size: 0;
-    line-height: 0;
-}
+} */
 
 
 .img-pulsar{
     margin:0px;
     width: 288px;
     height:162px;
-
 }
-
-
 
 * {
     margin: 0;
@@ -400,12 +372,65 @@ a.button:active {
     color: #fff;
 }
 
-.nav-bottom {
-    display: flex;
+/* .nav-bottom {
+    display: inline-flex;
     justify-content: space-around;
     position: absolute;
     bottom: 2vh;
     height: 5vh;
     width: 25vw;
     align-items: center;
+} */
+
+
+.nav-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    position: absolute;
+    bottom: 2vh;
+    height: 5vh;
+    width: 25vw;
 }
+
+#mail, #github{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mail svg, #github svg{
+    fill: white;
+}
+
+#theme-switch{
+    padding: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch svg{
+    fill: var(--primary-color)
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
