@@ -503,3 +503,32 @@ a.button:active {
   text-align: justify;
   align-items: center;
 }
+
+#research-experience{
+  margin-top: 75px;
+  margin-bottom: 25px;
+}
+
+.supervisor{
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.supervisor:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.supervisor:hover::before {
+  transform: scaleX(1);
+}
