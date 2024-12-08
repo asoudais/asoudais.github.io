@@ -9,7 +9,7 @@
   --nav-color: #0d1117;
   --nav-select: #0069ff33;
   --skill-box: pink;
-  --separator: grey;
+  --separator: rgb(201, 201, 201);
 }
 
 /* .darkmode{
@@ -37,7 +37,7 @@
   --nav-color: #0d1117;
   --nav-select: #0069ff33;
   --skill-box: #f05454;
-  --separator: grey;
+  --separator: rgb(201, 201, 201);
 }
 
 .nav-bottom {
@@ -106,7 +106,7 @@
 
 body {
   font-family: "Quicksand", sans-serif;
-  /* font-size: 1em; */
+  /* font-size: 20px; */
   background-color: var(--base-color);
   color: var(--text-color);
   position: relative;
@@ -120,6 +120,7 @@ main {
 
 .text {
   margin-left: 20px;
+  margin-bottom: 5vh;
   padding-left: 10px;
   /* border-left: 2px solid var(--secondary-text); */
   /* box-shadow:0px 0px 10px rgba(0,0,0,.5); */
@@ -145,22 +146,13 @@ section p {
   background: var(--base-variant);
 }
 
-/* section:before {
-    content: " ";
-    display: block;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    border-radius: 2px;
-    margin-left: 0;
-  } */
-
 .seperator {
   content: " ";
   display: block;
   border-top: 2px solid var(--separator);
   border-bottom: 2px solid var(--separator);
   /* border-radius: 2px; */
-  margin: 3vh 0 2vh 0;
+  margin: 5vh 2vw 3vh 2vw;
 }
 
 nav {
@@ -173,15 +165,15 @@ nav {
   color: var(--nav-text-color);
   border-left: 1px solid var(--nav-text-color);
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     display: none;
     font-size: 5px;
-  }
+  } */
 
   @media (min-width: 768px) {
     font-size: 1rem;
   }
-
+  
   @media (min-width: 1280px) {
     font-size: 24px;
   }
@@ -206,6 +198,8 @@ nav .test {
 nav h1 {
   height: 10vh;
   width: 100%;
+  font-size: 50px;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,15 +274,6 @@ nav .logo-container {
   transform: rotateY(180deg);
 }
 
-.link-IPAG {
-  text-decoration: none;
-  color: green;
-  font-weight: 600;
-}
-.link-IPAG:hover {
-  text-decoration: underline;
-}
-
 a.external-links {
   padding: 10px 10px;
   border: 1px outset buttonborder;
@@ -342,6 +327,12 @@ footer img {
   width: 75vw;
 }
 
+.img-simu{
+  width: 75vw;
+  left:0;
+  position: relative;
+}
+
 .button-wrapper {
   align-items: center;
   text-align: center;
@@ -350,7 +341,7 @@ footer img {
 
 a.button {
   --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
+  --s: 0.0em; /* size of the corner */
   --color: var(--primary-color);
 
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
@@ -366,11 +357,11 @@ a.button {
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 
   border: 0;
-  margin: 10px;
+  margin: 20px;
   text-decoration: none;
 
   user-select: none;
@@ -382,7 +373,7 @@ a.button:hover,
 a.button:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
-  outline-offset: 0.25em;
+  outline-offset: 0.3em;
 }
 
 a.button:active {
@@ -410,7 +401,7 @@ a.button:active {
   } */
 
 .timeline {
-  width: 69vw;
+  width: 69vw;  
   /* background-color:#072736; */
   color: var(--primary-color);
   padding: 30px 20px;
@@ -427,12 +418,12 @@ a.button:active {
   margin-right: 20px;
   display: inline-block;
   background-color: var(--skill-box);
-  padding: 6px 12px;
+  padding: 7px 10px;
   border-radius: 16px;
   font-weight: 600;
   text-align: center;
   width: 65px;
-  height: 38px;
+  height: 40px;
   /* position: relative; */
   /* left: -125px; */
 }
@@ -509,14 +500,14 @@ a.button:active {
   margin-bottom: 25px;
 }
 
-.supervisor{
+.external-link{
   position: relative;
   text-decoration: none;
   font-weight: 600;
   color: var(--primary-color);
 }
 
-.supervisor:before {
+.external-link:before {
   content: "";
   position: absolute;
   display: block;
@@ -529,6 +520,23 @@ a.button:active {
   transition: transform 0.3s ease;
 }
 
-.supervisor:hover::before {
+.external-link:hover::before {
   transform: scaleX(1);
+}
+
+.title-text{
+  padding-top: 5vh;
+  margin-bottom: 2vh;
+}
+
+.title-text h1{
+  font-size: 65px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.title-text h2{
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--secondary-text);
 }
