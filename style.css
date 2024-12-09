@@ -1,4 +1,36 @@
 :root {
+  --base-color: #f7f8f8;
+  --base-variant: white;
+  --text-color: rgb(27, 27, 27);
+  --secondary-text: rgb(182, 182, 182);
+  --primary-color: black;
+  --accent-color: red;
+  --nav-text-color: white;
+  --nav-color: #070808;
+  --nav-select: #a8bcf3; /* #99b3bd;*/
+  --skill-box: #a8bcf3;/*#898be6;*/
+  --separator: rgb(201, 201, 201);
+}
+
+.darkmode {
+  --base-color:#0d1117 ;
+  --base-variant:#151b23;
+  --text-color: #f0f0f0;
+  --secondary-text: grey;
+  --primary-color: white;
+  --accent-color: red;
+  --nav-text-color: white;
+  --nav-color: #070808 ;
+  --nav-select: #4b9ebe; /*#99b3bd;*/
+  --skill-box: #4b9ebe;
+  --separator: rgb(201, 201, 201);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* :root {
   --base-color: white;
   --base-variant: white;
   --text-color: black;
@@ -12,20 +44,6 @@
   --separator: rgb(201, 201, 201);
 }
 
-/* .darkmode{
-    --base-color:#010409;
-    --base-variant:#151b23;
-    --text-color:white;
-    --secondary-text:grey;
-    --primary-color:white;
-    --accent-color:red;
-    --nav-text-color:white;
-    --nav-color:#0d1117;
-    --nav-select:#0069ff33;
-    --skill-box:purple;
-    --separator:grey;
-} */
-
 .darkmode {
   --base-color: #222831;
   --base-variant: #151b23;
@@ -38,7 +56,7 @@
   --nav-select: #0069ff33;
   --skill-box: #f05454;
   --separator: rgb(201, 201, 201);
-}
+} */
 
 .nav-bottom {
   display: flex;
@@ -201,23 +219,24 @@ nav h1 {
   font-size: 50px;
   font-weight: 800;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .info-container p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 12vh;
+  text-align: center;
+  height: 10vh;
+  padding: 0 10px 0 10px;
 }
 
-nav p {
+/* nav p {
   text-align: center;
   height: 15vh;
-  /* display: table-cell;
-    text-align: center; */
-}
+} */
 
 .nav-container {
   display: flex;
@@ -232,6 +251,7 @@ nav p {
 
 .nav-items {
   width: 100%;
+  font-weight: 500;
   /* height: 120px; */
   /* background: #ececec;
 border: 1px solid #ddd; */
@@ -247,13 +267,29 @@ border: 1px solid #ddd; */
   width: 100%;
 }
 
-.nav-items a:hover {
+/* .nav-items a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   background-color: var(--nav-select);
+  color: black;
+} */
+
+
+.active-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav-select);
+  color: black;
+}
+
+.nav-container div .active-nav{
+  color: black;
 }
 
 nav .logo-container {
@@ -342,7 +378,7 @@ footer img {
 a.button {
   --b: 3px; /* border thickness */
   --s: 0.0em; /* size of the corner */
-  --color: var(--primary-color);
+  --color: var(--text-color);
 
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
@@ -376,34 +412,10 @@ a.button:focus-visible {
   outline-offset: 0.3em;
 }
 
-a.button:active {
-  background: var(--base-color);
-  color: var(--primary-color);
-}
-
-/* .timeline ul li:hover{
-    background-color:#071f2a;
-  }
-  .timeline ul li:hover:before{
-    background-color:#0F0;
-    box-shadow:0px 0px 10px 2px #0F0;
-  }
-  @media (max-width:300px){
-    .timeline{
-      width:100%;
-      padding:30px 5px 30px 10px;
-    }
-    .timeline ul li .content h3{
-      color:#34ace0;
-      font-size:15px;
-    }
-  
-  } */
-
 .timeline {
   width: 69vw;  
   /* background-color:#072736; */
-  color: var(--primary-color);
+  color: var(--text-color);
   padding: 30px 20px;
   box-shadow: 0px 0px 11px var(--primary-color);
   background-color: var(--base-variant);
@@ -447,6 +459,7 @@ a.button:active {
 .timeline .event-container .event h3 {
   color: var(--skill-box);
   font-weight: 600;
+  font-size: 30px;
 }
 .timeline .event-container .event p {
   padding: 5px 0px 15px 0px;
@@ -463,7 +476,7 @@ a.button:active {
 }
 
 .publi-container .paper-year {
-  color: var(--primary-color);
+  color: var(--text-color);
   padding: 30px 20px;
   display: flex;
   flex-direction: row;
@@ -481,12 +494,20 @@ a.button:active {
   height: 38px;
 }
 
-.publi-container h3 {
-  display: inline-block;
-  text-align: justify;
+.paper-link{
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: justify;
+  vertical-align: center;
+  text-decoration: none;
   color: var(--skill-box);
+  font-size: 30px;
   font-weight: 600;
+}
+
+.paper-link svg{
+
 }
 
 .paper p {
@@ -527,12 +548,15 @@ a.button:active {
 .title-text{
   padding-top: 5vh;
   margin-bottom: 2vh;
+  margin-left: 50px;
+  padding-right: 50px;
 }
 
 .title-text h1{
   font-size: 65px;
   font-weight: 600;
   color: var(--text-color);
+  margin-bottom: 40px;
 }
 
 .title-text h2{
