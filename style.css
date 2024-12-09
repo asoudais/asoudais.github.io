@@ -119,12 +119,10 @@ html{
 
 * {
   margin: 0;
-  /* font-size: 16pt; */
 }
 
 body {
   font-family: "Quicksand", sans-serif;
-  /* font-size: 20px; */
   background-color: var(--base-color);
   color: var(--text-color);
   position: relative;
@@ -140,9 +138,6 @@ main {
   margin-left: 20px;
   margin-bottom: 5vh;
   padding-left: 10px;
-  /* border-left: 2px solid var(--secondary-text); */
-  /* box-shadow:0px 0px 10px rgba(0,0,0,.5); */
-  /* box-shadow:0px 0px 5px var(--primary-color); */
   box-shadow: 0px 0px 11px var(--primary-color);
 }
 
@@ -169,7 +164,6 @@ section p {
   display: block;
   border-top: 2px solid var(--separator);
   border-bottom: 2px solid var(--separator);
-  /* border-radius: 2px; */
   margin: 5vh 2vw 3vh 2vw;
 }
 
@@ -182,11 +176,6 @@ nav {
   width: 25vw;
   color: var(--nav-text-color);
   border-left: 1px solid var(--nav-text-color);
-
-  /* @media (max-width: 768px) {
-    display: none;
-    font-size: 5px;
-  } */
 
   @media (min-width: 768px) {
     font-size: 1rem;
@@ -210,7 +199,6 @@ nav .test {
   color: var(--nav-text-color);
   margin-top: 1vh;
   margin-bottom: 1vh;
-  /* padding-top: 50px; */
 }
 
 nav h1 {
@@ -233,11 +221,6 @@ nav h1 {
   padding: 0 10px 0 10px;
 }
 
-/* nav p {
-  text-align: center;
-  height: 15vh;
-} */
-
 .nav-container {
   display: flex;
   flex-wrap: wrap;
@@ -252,9 +235,6 @@ nav h1 {
 .nav-items {
   width: 100%;
   font-weight: 500;
-  /* height: 120px; */
-  /* background: #ececec;
-border: 1px solid #ddd; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,17 +246,6 @@ border: 1px solid #ddd; */
   color: var(--nav-text-color);
   width: 100%;
 }
-
-/* .nav-items a:hover{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: var(--nav-select);
-  color: black;
-} */
-
 
 .active-nav{
   display: flex;
@@ -337,7 +306,6 @@ a.external-links {
 .tag {
   padding: 6px 12px;
   border-radius: 16px;
-  /* font-size: 14px; */
   font-weight: 600;
   background-color: var(--skill-box);
   color: var(--text-color);
@@ -414,7 +382,6 @@ a.button:focus-visible {
 
 .timeline {
   width: 69vw;  
-  /* background-color:#072736; */
   color: var(--text-color);
   padding: 30px 20px;
   box-shadow: 0px 0px 11px var(--primary-color);
@@ -436,8 +403,6 @@ a.button:focus-visible {
   text-align: center;
   width: 65px;
   height: 40px;
-  /* position: relative; */
-  /* left: -125px; */
 }
 
 .timeline .event-container .event {
@@ -464,7 +429,6 @@ a.button:focus-visible {
 .timeline .event-container .event p {
   padding: 5px 0px 15px 0px;
   width: 60vw;
-  /* font-size:15px; */
 }
 
 .publi-container {
@@ -504,10 +468,6 @@ a.button:focus-visible {
   color: var(--skill-box);
   font-size: 30px;
   font-weight: 600;
-}
-
-.paper-link svg{
-
 }
 
 .paper p {
