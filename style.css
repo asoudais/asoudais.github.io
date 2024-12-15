@@ -30,6 +30,26 @@ html{
   scroll-behavior: smooth;
 }
 
+/* Mobile */
+@media screen and (min-width: 0em) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 48em) {
+  
+}
+
+/* Small Desktop */
+@media screen and (min-width: 64em) {
+  
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1300px) {
+  
+}
+
 /* :root {
   --base-color: white;
   --base-variant: white;
@@ -135,6 +155,7 @@ main {
 }
 
 .text {
+  width: 69vw;
   margin-left: 20px;
   margin-bottom: 5vh;
   padding-left: 10px;
@@ -150,40 +171,9 @@ section h1 {
   margin-bottom: 40px;
 }
 
-#about {
-  padding-top: 5vh;
-}
-
 section p {
   padding: 1vh 0 1vh 0;
   background: var(--base-variant);
-}
-
-.seperator {
-  content: " ";
-  display: block;
-  border-top: 2px solid var(--separator);
-  border-bottom: 2px solid var(--separator);
-  margin: 5vh 2vw 3vh 2vw;
-}
-
-nav {
-  background-color: var(--nav-color);
-  position: fixed;
-  right: 0px;
-  margin: auto;
-  height: 100%;
-  width: 25vw;
-  color: var(--nav-text-color);
-  border-left: 1px solid var(--nav-text-color);
-
-  @media (min-width: 768px) {
-    font-size: 1rem;
-  }
-  
-  @media (min-width: 1280px) {
-    font-size: 24px;
-  }
 }
 
 nav .test {
@@ -201,17 +191,6 @@ nav .test {
   margin-bottom: 1vh;
 }
 
-nav h1 {
-  height: 10vh;
-  width: 100%;
-  font-size: 50px;
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .info-container p {
   display: flex;
   justify-content: center;
@@ -219,64 +198,6 @@ nav h1 {
   text-align: center;
   height: 10vh;
   padding: 0 10px 0 10px;
-}
-
-.nav-container {
-  display: flex;
-  flex-wrap: wrap;
-  height: 40vh;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-  > div {
-    flex: 0 0 25vw;
-  }
-}
-
-.nav-items {
-  width: 100%;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-items a {
-  text-align: center;
-  text-decoration: none;
-  color: var(--nav-text-color);
-  width: 100%;
-}
-
-.active-nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: var(--nav-select);
-  color: black;
-}
-
-.nav-container div .active-nav{
-  color: black;
-}
-
-nav .logo-container {
-  margin: auto;
-  height: 10vh;
-  width: 10vh;
-  text-align: center;
-}
-
-.logo-container img {
-  vertical-align: middle;
-  width: 10vh;
-  height: 10vh;
-  transition: transform 0.75s ease-in-out;
-}
-
-.logo-container img:hover {
-  transform: rotateY(180deg);
 }
 
 a.external-links {
@@ -338,6 +259,62 @@ footer img {
   /* position: relative; */
 }
 
+.title-text{
+  padding-top: 5vh;
+  margin-bottom: 2vh;
+  margin-left: 50px;
+  padding-right: 50px;
+}
+
+.title-text h1{
+  font-size: 65px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.title-text h2{
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--secondary-text);
+}
+
+/*-- ------------------------ -->
+<---         General          -->
+<--- ------------------------ -*/
+
+.seperator {
+  content: " ";
+  display: block;
+  border-top: 2px solid var(--separator);
+  border-bottom: 2px solid var(--separator);
+  margin: 5vh 2vw 3vh 2vw;
+}
+
+.external-link{
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.external-link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.external-link:hover::before {
+  transform: scaleX(1);
+}
+
 .button-wrapper {
   align-items: center;
   text-align: center;
@@ -380,6 +357,160 @@ a.button:focus-visible {
   outline-color: var(--color);
   outline-offset: 0.3em;
 }
+
+/*-- ------------------------ -->
+<---         Navbar           -->
+<--- ------------------------ -*/
+
+nav {
+  background-color: var(--nav-color);
+  position: fixed;
+  right: 0px;
+  margin: auto;
+  height: 100%;
+  width: 25vw;
+  color: var(--nav-text-color);
+  border-left: 1px solid var(--nav-text-color);
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+  
+  @media (min-width: 1280px) {
+    font-size: 24px;
+  }
+}
+
+nav h1 {
+  height: 10vh;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 40vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  > div {
+    flex: 0 0 25vw;
+  }
+}
+
+.nav-items {
+  width: 100%;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--nav-text-color);
+  width: 100%;
+}
+
+.active-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav-select);
+  color: black;
+}
+
+.nav-container div .active-nav{
+  color: black;
+}
+
+nav .logo-container {
+  margin: auto;
+  height: 10vh;
+  width: 10vh;
+  text-align: center;
+}
+
+.logo-container img {
+  vertical-align: middle;
+  width: 10vh;
+  height: 10vh;
+  transition: transform 0.75s ease-in-out;
+}
+
+.logo-container img:hover {
+  transform: rotateY(180deg);
+}
+
+/*-- ------------------------ -->
+<---          About           -->
+<--- ------------------------ -*/
+
+#about {
+  padding-top: 5vh;
+}
+
+/*-- ------------------------ -->
+<---       Publications       -->
+<--- ------------------------ -*/
+
+.publi-container {
+  width: 69vw;
+  color: var(--primary-color);
+  padding: 30px 20px;
+  box-shadow: 0px 0px 11px var(--primary-color);
+  background-color: var(--base-variant);
+}
+
+.publi-container .paper-year {
+  color: var(--text-color);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.publi-container span {
+  margin-right: 20px;
+  display: inline-block;
+  background-color: var(--skill-box);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: 600;
+  text-align: center;
+  width: 200px;
+  height: 38px;
+}
+
+.paper-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  vertical-align: center;
+  text-decoration: none;
+  color: var(--skill-box);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.paper p {
+  display: inline-block;
+  text-align: justify;
+  align-items: center;
+}
+
+
+/*-- ------------------------ -->
+<---       Curriculum         -->
+<--- ------------------------ -*/
 
 .timeline {
   width: 69vw;  
@@ -432,96 +563,12 @@ a.button:focus-visible {
   width: 60vw;
 }
 
-.publi-container {
-  width: 69vw;
-  color: var(--primary-color);
-  padding: 30px 20px;
-  box-shadow: 0px 0px 11px var(--primary-color);
-  background-color: var(--base-variant);
-}
-
-.publi-container .paper-year {
-  color: var(--text-color);
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: row;
-}
-
-.publi-container span {
-  margin-right: 20px;
-  display: inline-block;
-  background-color: var(--skill-box);
-  padding: 6px 12px;
-  border-radius: 16px;
-  font-weight: 600;
-  text-align: center;
-  width: 200px;
-  height: 38px;
-}
-
-.paper-link{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  vertical-align: center;
-  text-decoration: none;
-  color: var(--skill-box);
-  font-size: 30px;
-  font-weight: 600;
-}
-
-.paper p {
-  display: inline-block;
-  text-align: justify;
-  align-items: center;
-}
-
 #research-experience{
   margin-top: 75px;
   margin-bottom: 25px;
 }
 
-.external-link{
-  position: relative;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--primary-color);
-}
+/*-- ------------------------ -->
+<---        Contact           -->
+<--- ------------------------ -*/
 
-.external-link:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--text-color);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.external-link:hover::before {
-  transform: scaleX(1);
-}
-
-.title-text{
-  padding-top: 5vh;
-  margin-bottom: 2vh;
-  margin-left: 50px;
-  padding-right: 50px;
-}
-
-.title-text h1{
-  font-size: 65px;
-  font-weight: 600;
-  color: var(--text-color);
-  margin-bottom: 40px;
-}
-
-.title-text h2{
-  font-size: 35px;
-  font-weight: 600;
-  color: var(--secondary-text);
-}
